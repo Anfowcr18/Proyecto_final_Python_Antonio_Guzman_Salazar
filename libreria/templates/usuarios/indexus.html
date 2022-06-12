@@ -1,0 +1,46 @@
+{% extends base.html %}
+
+{%block titulo %} lista de usuarios {% endblock%}
+
+   {% block contenido %}
+
+   
+   <div class="card">
+    <div class="card-header">
+      <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">agregar nuevo usuario</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">usuario</h4>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{usuario.idus}}</td>
+                    <td>{{usuario.nombre}}</td>
+                    <td>
+                        
+
+                        
+                    </td>
+                    <td><a name="" id="" class="btn btn-info" href="{% url 'editar' usuario.idus%}" role="button">Editar</a> 
+                        │ <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' usuario.idus%}" role="button">Borrar</a> 
+                    </td>
+                </tr>
+                {% end for %}
+            </tbody>
+        </table>
+        
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+   </div>
+   
+   {% endblock%}

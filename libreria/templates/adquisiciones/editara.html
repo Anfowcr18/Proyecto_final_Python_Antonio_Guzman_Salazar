@@ -1,0 +1,20 @@
+{% extends base.html %}
+
+{%block titulo %} editar adquisicion {% endblock%}
+
+   {% block contenido %}
+
+   <div class="card">
+      <div class="card-header">
+          Editar informacion de la adquisicion
+      </div>
+      <div class="card-body">
+          <h4 class="card-title">Datos dela adquisicion</h4>
+          {% include 'adquisicion/forma.html' %}
+      </div>
+      <div class="card-footer text-muted">
+          Footer
+      </div>
+  </div>
+   
+   {% endblock%}
